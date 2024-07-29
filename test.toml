@@ -1,0 +1,53 @@
+
+
+# How often to reload data from the nodes
+reload_interval = "10s"
+# If specified, a http server will serve static content here
+server_address = "0.0.0.0:8080"
+
+# Shown in the document title, if specified
+chain_name="EphemeralNet"
+#chain_name="Goerli"
+#chain_name="Mainnet"
+
+  #apikey = ""
+  #endpoint = "https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=YourApiKeyToken"
+  #endpoint2="https://api.etherscan.io/api?module=proxy&action=eth_getBlockByNumber&tag=0x10d4f&boolean=true&apikey=YourApiKeyToken"
+[[clients]]
+  kind="testnode-canon"
+[[clients]]
+  kind="testnode-canon"
+[[clients]]
+  kind="testnode-canon"
+[[clients]]
+  kind="testnode-fork-old"
+[[clients]]
+  kind="testnode-fork-recent"
+[[clients]]
+  kind="testnode-fork-recent"
+[[clients]]
+  kind="testnode-fork-recent"
+
+# Example on how to set access headers:
+#
+# [[clients]]
+#   kind="rpc"
+#   name="Goerli-1"
+#   url="https://goerli.myethereumnode.io"
+#   auth_headers=["Access-Auth-Id: 192830110.access", "Access-Secret: 112391201092381209381209812093"]
+
+
+
+  [Metrics]
+
+enabled = false
+endpoint = "https://geth-bench-influx.ethdevops.io/"
+username = "metrics"
+database  = "metrics"
+password  = "xxx"
+namespace = "monitoring."
+
+#[Etherscan]
+
+# https://api.etherscan.io/api?module=proxy&action=eth_getBlockByNumber&tag=0x10d4f&boolean=true&apikey=YourApiKeyToken
+# https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=YourApiKeyToken
