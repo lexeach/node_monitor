@@ -26,14 +26,14 @@ alerts from all/any node which supports basic set of standard rpc methods.
 
 #command from satya for deployemnet on server
 
-[1:41 pm, 29/7/2024] Satyasai Devloper India: sudo apt install apt-transport-https ca-certificates curl software-properties-common
-[1:41 pm, 29/7/2024] Satyasai Devloper India: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-[1:42 pm, 29/7/2024] Satyasai Devloper India: echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-[1:43 pm, 29/7/2024] Satyasai Devloper India: sudo apt install docker-ce docker-ce-cli containerd.io
-[1:43 pm, 29/7/2024] Satyasai Devloper India: sudo docker run hello-world
-[1:45 pm, 29/7/2024] Satyasai Devloper India: docker --version
-[1:58 pm, 29/7/2024] Satyasai Devloper India: docker run -d --name nodemonitor -p 8080:8080 -v <path-to-config.toml>/config.toml:/config.toml holiman/nodemonitor:latest /config.toml
-[1:59 pm, 29/7/2024] Satyasai Devloper India: docker run -d --name nodemonitor -p 8080:8080 -v ./config.toml:/config.toml holiman/nodemonitor:latest /config.toml
-[2:12 pm, 29/7/2024] Satyasai Devloper India: docker restart nodemonitor
-[2:15 pm, 29/7/2024] Satyasai Devloper India: docker stop nodemonitor
-[2:17 pm, 29/7/2024] Satyasai Devloper India: docker rm -f nodemonitor
+1. sudo apt install apt-transport-https ca-certificates curl software-properties-common
+2.  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+3. echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+4. sudo apt install docker-ce docker-ce-cli containerd.io
+5. sudo docker run hello-world
+6. --version
+7. docker run -d --name nodemonitor -p 8080:8080 -v <path-to-config.toml>/config.toml:/config.toml holiman/nodemonitor:latest /config.toml
+8. docker run -d --name nodemonitor -p 8080:8080 -v ./config.toml:/config.toml holiman/nodemonitor:latest /config.toml
+9. docker restart nodemonitor
+10. docker stop nodemonitor
+11. docker rm -f nodemonitor
